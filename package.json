@@ -1,0 +1,30 @@
+{
+  "name": "free-translator",
+  "version": "0.2.1",
+  "description": "Free translator NPM package based on headless Web browser",
+  "main": "source/index.js",
+  "scripts": {
+    "debug": "set NPM_DEBUG=1  &&  node --inspect-brk test/index",
+    "test": "node test/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechQuery/Translator.git"
+  },
+  "keywords": [
+    "translate",
+    "javascript",
+    "natural-language",
+    "google",
+    "headless-browsers"
+  ],
+  "author": "shiy007@qq.com",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/TechQuery/Translator/issues"
+  },
+  "homepage": "https://github.com/TechQuery/Translator#readme",
+  "dependencies": {
+    "chromy": "^0.5.9"
+  }
+}

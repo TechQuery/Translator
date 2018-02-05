@@ -1,0 +1,30 @@
+{
+    "Google":    {
+        "URL":          "https://translate.google.cn/",
+        "input":        "#source",
+        "output":       "#result_box",
+        "phonogram":    "#res-translit",
+        "reset":        "#gt-clear"
+    },
+    "YouDao":    {
+        "URL":       "http://fanyi.youdao.com/",
+        "input":     "#inputOriginal",
+        "submit":    "#transMachine",
+        "output":    "#transTarget",
+        "reset":     "#inputDelete"
+    },
+    "SoGou":     {
+        "URL":       "http://fanyi.sogou.com/",
+        "input":     "#sogou-translate-input",
+        "submit":    "#btn-translate",
+        "output":    "#sogou-translate-output",
+        "reset":     "#btn-clear"
+    },
+    "iCiBa":     {
+        "URL":       "http://fy.iciba.com/",
+        "input":     "#textarea",
+        "submit":    ".trans-oper .trans-btn",
+        "output":    "#res_con .word, #res_con .res-sentence",
+        "reset":     "#text_clear"
+    }
+}
