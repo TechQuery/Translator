@@ -1,7 +1,6 @@
 'use strict';
 
 const Translator = require('../source/'),
-      Utility = require('../source/utility'),
       Config = require('../source/config.json');
 
 console.log = function () {/* fix Babel bug in Chromy */};
@@ -9,21 +8,24 @@ console.log = function () {/* fix Babel bug in Chromy */};
 const test_text = ['Hello, Google!',  'Bye, GFW!'];
 
 
-Utility.toQueue(Object.keys( Config ).map(function (engine) {
+(async function () {
 
-    return  async function () {
+    for (let engine  of  Object.keys( Config )) {
 
         console.info(`
             >>> ${engine} <<<
         `);
 
-        const translator = await (new Translator( engine )).boot();
+        let start = Date.now(),
+            translator = await (new Translator( engine )).boot();
+
+        console.info(`[Boot - ${(Date.now() - start) / 1000}s]\n`);
 
         console.dir(await translator.batch(test_text,  function (text, seconds) {
 
-            console.info(`[ ${seconds}s ]  ${text}`);
+            console.info(`[Submit - ${seconds}s]  ${text}\n`);
         }));
 
         await translator.destroy();
-    };
-}));
+    }
+})();

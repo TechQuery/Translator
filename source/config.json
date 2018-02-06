@@ -2,6 +2,7 @@
     "Google":    {
         "URL":          "https://translate.google.cn/",
         "input":        "#source",
+        "submit":       "#gt-submit",
         "output":       "#result_box",
         "phonogram":    "#res-translit",
         "reset":        "#gt-clear"
@@ -24,7 +25,7 @@
         "URL":       "http://fy.iciba.com/",
         "input":     "#textarea",
         "submit":    ".trans-oper .trans-btn",
-        "output":    "#res_con .word, #res_con .res-sentence",
+        "output":    "#trans_result .word, #trans_result .res-sentence",
         "reset":     "#text_clear"
     }
 }

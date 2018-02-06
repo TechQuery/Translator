@@ -1,10 +1,13 @@
 {
   "name": "free-translator",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Free translator NPM package based on headless Web browser",
+  "engines": {
+    "node": "^7.6.0"
+  },
   "main": "source/index.js",
   "scripts": {
-    "debug": "set NPM_DEBUG=1  &&  node --inspect-brk test/index",
+    "debug": "set NPM_DEBUG=1  &&  node --inspect test/index",
     "test": "node test/index"
   },
   "repository": {
